@@ -1,6 +1,6 @@
 module.exports = function(sequelize, connection) {
-  var Hashtag = require('./hashtag.model')(connection);
-  var User = require('./user.model')(connection);
+  var Hashtag = require('./hashtag.model')(sequelize, connection);
+  var User = require('./user.model')(sequelize, connection);
 
   var Twit = connection.define('Twit', {
     commentId: sequelize.BIGINT,
