@@ -16,7 +16,7 @@ module.exports = function(sequelize, connection) {
 
   Twit.hasMany(Hashtag);
   Twit.hasMany(User);
-  Twit.hasOne(User, {as: 'Author'});
+  Twit.belongsTo(User, {as: 'Author'});
 
   return Twit;
 }
