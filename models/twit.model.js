@@ -15,6 +15,8 @@ module.exports = function(sequelize, connection) {
 
   Twit.Hashtag = Hashtag;
   Twit.User = User;
+  Twit.TwitUser = TwitUser;
+  Twit.TwitHashtag = TwitHashtag;
 
   Hashtag.belongsToMany(Twit, {through: TwitHashtag});
   User.belongsToMany(Twit, {through: TwitUser});
